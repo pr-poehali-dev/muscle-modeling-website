@@ -16,44 +16,44 @@ const muscleActivityData = [
 const HomeSection = () => {
   return (
     <div className="space-y-12 animate-fade-in">
-      <section className="text-center space-y-4 py-12">
-        <h2 className="text-4xl font-bold text-secondary">
+      <section className="text-center space-y-6 py-16">
+        <h2 className="text-5xl font-bold text-foreground tracking-tight">
           Лаборатория биомеханики и моделирования
         </h2>
-        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+        <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
           Междисциплинарные исследования механизмов генерации мышечной силы и разработка
           математических моделей мышечной деятельности
         </p>
       </section>
 
-      <div className="grid md:grid-cols-3 gap-6">
-        <Card className="hover-scale">
-          <CardHeader>
-            <Icon name="FlaskConical" size={40} className="text-primary mb-2" />
-            <CardTitle>Исследования</CardTitle>
-            <CardDescription>Фундаментальные и прикладные научные проекты</CardDescription>
+      <div className="grid md:grid-cols-3 gap-8">
+        <Card className="border-2 transition-all hover:border-primary hover:shadow-lg">
+          <CardHeader className="space-y-4">
+            <Icon name="FlaskConical" size={48} className="text-primary" />
+            <CardTitle className="text-2xl">Исследования</CardTitle>
+            <CardDescription className="text-base">Фундаментальные и прикладные научные проекты</CardDescription>
           </CardHeader>
         </Card>
-        <Card className="hover-scale">
-          <CardHeader>
-            <Icon name="BookOpen" size={40} className="text-primary mb-2" />
-            <CardTitle>Публикации</CardTitle>
-            <CardDescription>Статьи в рецензируемых научных журналах</CardDescription>
+        <Card className="border-2 transition-all hover:border-primary hover:shadow-lg">
+          <CardHeader className="space-y-4">
+            <Icon name="BookOpen" size={48} className="text-primary" />
+            <CardTitle className="text-2xl">Публикации</CardTitle>
+            <CardDescription className="text-base">Статьи в рецензируемых научных журналах</CardDescription>
           </CardHeader>
         </Card>
-        <Card className="hover-scale">
-          <CardHeader>
-            <Icon name="Workflow" size={40} className="text-primary mb-2" />
-            <CardTitle>Методология</CardTitle>
-            <CardDescription>Методы моделирования и экспериментальные подходы</CardDescription>
+        <Card className="border-2 transition-all hover:border-primary hover:shadow-lg">
+          <CardHeader className="space-y-4">
+            <Icon name="Workflow" size={48} className="text-primary" />
+            <CardTitle className="text-2xl">Методология</CardTitle>
+            <CardDescription className="text-base">Методы моделирования и экспериментальные подходы</CardDescription>
           </CardHeader>
         </Card>
       </div>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>Динамика мышечной активности</CardTitle>
-          <CardDescription>
+      <Card className="border-2">
+        <CardHeader className="space-y-3">
+          <CardTitle className="text-2xl">Динамика мышечной активности</CardTitle>
+          <CardDescription className="text-base">
             ЭМГ-активность основных мышечных групп при выполнении концентрического сокращения
           </CardDescription>
         </CardHeader>
@@ -81,26 +81,26 @@ const HomeSection = () => {
               <Line
                 type="monotone"
                 dataKey="biceps"
-                stroke="#0EA5E9"
+                stroke="#1e3a5f"
                 name="Бицепс"
-                strokeWidth={2}
-                dot={{ fill: '#0EA5E9', r: 4 }}
+                strokeWidth={3}
+                dot={{ fill: '#1e3a5f', r: 5 }}
               />
               <Line
                 type="monotone"
                 dataKey="triceps"
-                stroke="#1A1F2C"
+                stroke="#2c5282"
                 name="Трицепс"
-                strokeWidth={2}
-                dot={{ fill: '#1A1F2C', r: 4 }}
+                strokeWidth={3}
+                dot={{ fill: '#2c5282', r: 5 }}
               />
               <Line
                 type="monotone"
                 dataKey="deltoid"
-                stroke="#8E9196"
+                stroke="#4a6fa5"
                 name="Дельтовидная"
-                strokeWidth={2}
-                dot={{ fill: '#8E9196', r: 4 }}
+                strokeWidth={3}
+                dot={{ fill: '#4a6fa5', r: 5 }}
               />
             </LineChart>
           </ResponsiveContainer>
